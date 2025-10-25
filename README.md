@@ -19,13 +19,13 @@ A dedicated **.NET Worker Service** built for Windows that automatically perform
 
 ## ⚙️ Configuration
 
-Before deploying the service, you must configure the following three constants in the application's configuration file (usually `Worker.cs` or equivalent environment variables).
+Before deploying the service, you must configure the following three constants in the application's configuration file (usually `appsettings.development.json` or equivalent environment variables).
 
-| Setting Name                   | Description                                                                                                                  | Example Value           |
-| :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :---------------------- |
-| `SourcePathFolderToCopy`       | The **full path** to the local folder whose contents you wish to copy.                                                       | `"C:\\Users\\YourName"` |
-| `DestinationPathFolderToPaste` | The name of the folder **on the USB drive** where the files will be copied. This folder will be created if it doesn't exist. | `"G:\\Backup"`          |
-| `TargetDrive`                  | The **specific drive letter** (e.g., `G:`) the service should listen for before initiating the backup.                       | `"G:"`                  |
+| Setting Name  | Description                                                                                                                  | Example Value           |
+| :------------ | :--------------------------------------------------------------------------------------------------------------------------- | :---------------------- |
+| `From`        | The **full path** to the local folder whose contents you wish to copy.                                                       | `"C:\\Users\\YourName"` |
+| `To`          | The name of the folder **on the USB drive** where the files will be copied. This folder will be created if it doesn't exist. | `"G:\\Backup"`          |
+| `TargetDrive` | The **specific drive letter** (e.g., `G:`) the service should listen for before initiating the backup.                       | `"G:"`                  |
 
 ---
 
